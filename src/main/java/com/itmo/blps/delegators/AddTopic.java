@@ -36,5 +36,10 @@ public class AddTopic implements JavaDelegate {
 
         topicRepository.save(topic);
 
+        execution.setVariable(
+                "result",
+                "Статья %s успешно создана!".formatted(title)
+        );
+
     }
 }
