@@ -1,7 +1,5 @@
-package com.itmo.blps.model.topic;
+package com.itmo.blps.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.itmo.blps.model.user.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,6 +16,8 @@ public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    private String userId;
     private String title;
     private String description;
     private String content;
@@ -25,14 +25,9 @@ public class Topic {
     private Date createdAt;
     private Date updatedAt;
     private Integer rate;
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnore
-    private User user;
-
 
     public Topic(String title, String description, String content, TopicCategory category,
-                 Date createdAt, Date updatedAt, Integer rate, User user) {
+                 Date createdAt, Date updatedAt, Integer rate, String userId) {
         this.title = title;
         this.description = description;
         this.content = content;
@@ -40,6 +35,6 @@ public class Topic {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.rate = rate;
-        this.user = user;
+        this.userId = userId;
     }
 }

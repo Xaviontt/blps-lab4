@@ -1,24 +1,27 @@
 package com.itmo.blps.delegators;
 
 import com.itmo.blps.dao.TopicRepository;
-import com.itmo.blps.dao.UserRepository;
-import com.itmo.blps.model.topic.Topic;
-import com.itmo.blps.model.topic.TopicCategory;
-import com.itmo.blps.model.user.User;
+import com.itmo.blps.model.Topic;
+import com.itmo.blps.model.TopicCategory;
+import com.itmo.blps.service.TopicService;
+import net.bytebuddy.implementation.bytecode.ShiftRight;
+import org.camunda.bpm.engine.IdentityService;
+import org.camunda.bpm.engine.delegate.BpmnError;
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
-import spinjar.com.sun.xml.bind.v2.TODO;
+
 
 import javax.inject.Named;
 import java.util.Date;
+import java.util.List;
 
 @Named("addTopic")
 public class AddTopic implements JavaDelegate {
     @Autowired
-    private TopicRepository topicRepository;
+    private TopicService topicService;
     @Autowired
-    private UserRepository userRepository;
+    private IdentityService identityService;
 
     @Override
     public void execute(DelegateExecution execution) throws Exception {
@@ -27,26 +30,25 @@ public class AddTopic implements JavaDelegate {
         String content = (String) execution.getVariable("content");
         String category = (String) execution.getVariable("category");
 
-        // TODO: 16.06.2023 получить пользователя
-        String email = (String) execution.getVariable("email");
+        String userId = identityService.getCurrentAuthentication().getUserId();
+        List<String> roles = identityService.getCurrentAuthentication().getGroupIds();
+        if (!roles.contains("camunda-admin")) {
+            throw new BpmnError("authority_error", "Not enough authority");
+        }
 
-        User user = userRepository.findByEmail(email);
-
-        Date currantDate = new Date();
+        Date currentDate = new Date();
         TopicCategory topicCategory = TopicCategory.valueOf(category);
 
-        Topic topic = new Topic(
+        Topic topic = topicService.save(new Topic(
                 title,
                 description,
                 content,
                 topicCategory,
-                currantDate,
-                currantDate,
+                currentDate,
+                currentDate,
                 0,
-                user
-        );
-
-        topicRepository.save(topic);
+                userId
+        ));
 
         execution.setVariable("topicTitle", topic.getTitle());
         execution.setVariable("topicDescription", topic.getDescription());
