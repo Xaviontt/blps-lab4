@@ -49,11 +49,5 @@ public class AddTopic implements JavaDelegate {
                 0,
                 userId
         ));
-
-        execution.setVariable("topicTitle", topic.getTitle());
-        execution.setVariable("topicDescription", topic.getDescription());
-        execution.setVariable("topicContent", topic.getContent());
-        execution.setVariable("topicCategory", topic.getCategory().label);
-
     }
 }

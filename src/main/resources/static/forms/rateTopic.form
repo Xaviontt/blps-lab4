@@ -1,0 +1,37 @@
+{
+  "components": [
+    {
+      "label": "Topic ID",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0e257db",
+        "columns": null
+      },
+      "id": "Field_0ja5bd0",
+      "key": "topicId",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Button",
+      "type": "button",
+      "layout": {
+        "row": "Row_1odvffo",
+        "columns": null
+      },
+      "id": "Field_0s6y3k1",
+      "key": "field_0rti7yt"
+    }
+  ],
+  "type": "default",
+  "id": "Form_1xey8ij",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.11.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 8
+}
