@@ -1,4 +1,4 @@
-package com.itmo.blps.model;
+package com.itmo.blps.model.topic;
 
 public enum TopicCategory {
     NEWS("News"),

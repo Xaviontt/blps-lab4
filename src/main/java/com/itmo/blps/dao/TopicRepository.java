@@ -1,7 +1,7 @@
 package com.itmo.blps.dao;
 
-import com.itmo.blps.model.Topic;
-import com.itmo.blps.model.TopicCategory;
+import com.itmo.blps.model.topic.Topic;
+import com.itmo.blps.model.topic.TopicCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
