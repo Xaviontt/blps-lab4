@@ -7,7 +7,8 @@
         "row": "Row_1vwjifq",
         "columns": null
       },
-      "id": "Field_0deia23"
+      "id": "Field_0deia23",
+      "properties": {}
     },
     {
       "text": "=topicDescription",
