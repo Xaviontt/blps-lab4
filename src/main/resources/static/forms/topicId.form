@@ -1,0 +1,27 @@
+{
+  "components": [
+    {
+      "label": "ID статьи",
+      "type": "number",
+      "layout": {
+        "row": "Row_0f1en96",
+        "columns": null
+      },
+      "id": "Field_0kc8gpf",
+      "key": "topicId",
+      "description": "Введите ID статьи, которую хотите удалить",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_0ohjdbf",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.11.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.19.0",
+  "schemaVersion": 8
+}

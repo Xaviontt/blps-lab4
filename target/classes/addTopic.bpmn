@@ -24,7 +24,7 @@
       <bpmn:incoming>Flow_0q8j8ve</bpmn:incoming>
       <bpmn:outgoing>Flow_1ntxf7n</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:userTask id="Activity_0l3sh88" name="Просмотр результат" camunda:formKey="camunda-forms:/forms/topic.form">
+    <bpmn:userTask id="Activity_0l3sh88" name="Просмотр результат" camunda:formKey="camunda-forms:/forms/topicView.form">
       <bpmn:incoming>Flow_1ntxf7n</bpmn:incoming>
       <bpmn:outgoing>Flow_15r0kkt</bpmn:outgoing>
     </bpmn:userTask>
@@ -45,12 +45,12 @@
         <dc:Bounds x="160" y="100" width="868" height="427" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Lane_0f3to6z_di" bpmnElement="Lane_0f3to6z" isHorizontal="true">
-        <dc:Bounds x="190" y="100" width="838" height="307" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Lane_0kz1qwk_di" bpmnElement="Lane_0kz1qwk" isHorizontal="true">
         <dc:Bounds x="190" y="407" width="838" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0f3to6z_di" bpmnElement="Lane_0f3to6z" isHorizontal="true">
+        <dc:Bounds x="190" y="100" width="838" height="307" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_13qt2y3_di" bpmnElement="Activity_0mwf767">

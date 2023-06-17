@@ -1,44 +1,76 @@
 {
   "components": [
     {
-      "text": "=topicTitle",
-      "type": "text",
+      "label": "Заголовок",
+      "type": "textfield",
       "layout": {
-        "row": "Row_1vwjifq",
+        "row": "Row_0de8jpq",
         "columns": null
       },
-      "id": "Field_0deia23"
+      "id": "Field_014mni3",
+      "key": "title",
+      "description": "Название статьи",
+      "validate": {
+        "required": true
+      }
     },
     {
-      "text": "=topicDescription",
-      "type": "text",
+      "label": "Описание",
+      "type": "textfield",
       "layout": {
-        "row": "Row_0bn70qd",
+        "row": "Row_0h76crm",
         "columns": null
       },
-      "id": "Field_1q3vx7c"
+      "id": "Field_0fzqkx5",
+      "key": "description",
+      "validate": {
+        "required": true
+      }
     },
     {
-      "text": "=topicContent",
-      "type": "text",
+      "label": "Контент",
+      "type": "textarea",
       "layout": {
-        "row": "Row_0iwshh3",
+        "row": "Row_1hululy",
         "columns": null
       },
-      "id": "Field_047ph6f"
+      "id": "Field_0n8zqwk",
+      "key": "content",
+      "validate": {
+        "required": true
+      }
     },
     {
-      "text": "=topicCategory",
-      "type": "text",
+      "values": [
+        {
+          "label": "NEWS",
+          "value": "NEWS"
+        },
+        {
+          "label": "ARTICLES",
+          "value": "ARTICLES"
+        },
+        {
+          "label": "TEST_DRIVES",
+          "value": "TEST_DRIVES"
+        }
+      ],
+      "label": "Категория",
+      "type": "select",
       "layout": {
-        "row": "Row_0njfqas",
+        "row": "Row_0ikdm72",
         "columns": null
       },
-      "id": "Field_1tygu5s"
+      "id": "Field_1ic1f7f",
+      "key": "category",
+      "validate": {
+        "required": true
+      },
+      "description": "Выберите категорию статьи"
     }
   ],
   "type": "default",
-  "id": "Form_0or6olp",
+  "id": "addTopic",
   "exporter": {
     "name": "Camunda Modeler",
     "version": "5.11.0"
