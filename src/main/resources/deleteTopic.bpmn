@@ -3,7 +3,7 @@
   <bpmn:collaboration id="Collaboration_1eu206t">
     <bpmn:participant id="Participant_0bnj9eb" name="Удаление статьи" processRef="Process_1bgwr56" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_1bgwr56" isExecutable="true">
+  <bpmn:process id="Process_1bgwr56" name="Удалить статью" isExecutable="true">
     <bpmn:laneSet id="LaneSet_10rvnx6">
       <bpmn:lane id="Lane_0c5ecv8" name="Пользователь">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
@@ -107,11 +107,23 @@
         <di:waypoint x="298" y="320" />
         <di:waypoint x="440" y="320" />
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1i14wes_di" bpmnElement="Flow_1i14wes">
+        <di:waypoint x="635" y="210" />
+        <di:waypoint x="490" y="210" />
+        <di:waypoint x="490" y="280" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="556" y="192" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0m55acu_di" bpmnElement="Flow_0m55acu">
         <di:waypoint x="540" y="320" />
         <di:waypoint x="575" y="320" />
         <di:waypoint x="575" y="520" />
         <di:waypoint x="610" y="520" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15ho8o6_di" bpmnElement="Flow_15ho8o6">
+        <di:waypoint x="710" y="520" />
+        <di:waypoint x="782" y="520" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1g59fx1_di" bpmnElement="Flow_1g59fx1">
         <di:waypoint x="660" y="462" />
@@ -127,18 +139,6 @@
         <bpmndi:BPMNLabel>
           <dc:Bounds x="704" y="192" width="20" height="14" />
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1i14wes_di" bpmnElement="Flow_1i14wes">
-        <di:waypoint x="635" y="210" />
-        <di:waypoint x="490" y="210" />
-        <di:waypoint x="490" y="280" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="556" y="192" width="13" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_15ho8o6_di" bpmnElement="Flow_15ho8o6">
-        <di:waypoint x="710" y="520" />
-        <di:waypoint x="782" y="520" />
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

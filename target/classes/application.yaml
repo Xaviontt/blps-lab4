@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/camunda
-    username: callmepedro
-    password: postgres
+    username: postgres
+    password: password
 
   jpa:
     show-sql: true
@@ -13,5 +13,5 @@ spring:
       ddl-auto: update
 
 camunda.bpm.admin-user:
-  id: admin
-  password: admin
+  id: xavion
+  password: xavion

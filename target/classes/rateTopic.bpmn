@@ -3,7 +3,7 @@
   <bpmn:collaboration id="Collaboration_0ulyjad">
     <bpmn:participant id="Participant_1lh336m4" processRef="Process_17fs22am" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_17fs22am" name="Оценка статьи" isExecutable="true">
+  <bpmn:process id="Process_17fs22am" name="Rate topic" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0fk7zys">
       <bpmn:lane id="Lane_0f3to6z" name="Пользователь">
         <bpmn:flowNodeRef>Activity_0mwf7267</bpmn:flowNodeRef>

@@ -4,7 +4,7 @@
     <bpmn:extensionElements />
     <bpmn:participant id="Participant_1lh36m4" name="Создание статьи" processRef="lab4-addTopic" />
   </bpmn:collaboration>
-  <bpmn:process id="lab4-addTopic" name="AddTopic" isExecutable="true">
+  <bpmn:process id="lab4-addTopic" name="Add topic" isExecutable="true">
     <bpmn:laneSet id="LaneSet_0zyyvu1">
       <bpmn:lane id="Lane_0f3to6z" name="Пользователь">
         <bpmn:flowNodeRef>Activity_0mwf767</bpmn:flowNodeRef>
